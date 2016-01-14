@@ -13,6 +13,7 @@ Just add the STLBGVideo folder to your project.
 3. Create a  view controller that inherits from STLVideoViewController  F:ViewController : STLVideoViewController
 4. Run your project
 
+* If you find that in the course of the function is not working, I hope you will Issues.
 
 中文介绍
 ==============
@@ -32,5 +33,7 @@ Just add the STLBGVideo folder to your project.
 4. 运行你的程序
 
 
-如果有任何问题可以在简书:http://www.jianshu.com/p/c4704c086b67  下留言或者微博@神经症人格者 看到我会第一时间响应,解决的.
+* 如果在使用过程中发现功能不能正常使用，希望你能Issues我.
+
+如果想更多的交流可以在简书:http://www.jianshu.com/p/c4704c086b67  下留言或者微博@神经症人格者 
 
