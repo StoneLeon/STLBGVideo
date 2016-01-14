@@ -1,5 +1,6 @@
 # STLBGVideo
 ==============
+![demoGIF.gif](https://ooo.0o0.ooo/2016/01/13/569718b2c6d14.gif)
 
 Make your view controllers a custom backgroundvideo
 
@@ -17,7 +18,8 @@ Just add the STLBGVideo folder to your project.
 ==============
 
 让您的视图控制器的自定义backgroundvideo
-
+公司demo效果:
+![demoGIF.gif](https://ooo.0o0.ooo/2016/01/13/569718b2c6d14.gif)
 ## 加载
 拖拽STLBGVideo文件夹到你的项目
 
