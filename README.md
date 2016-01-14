@@ -27,11 +27,11 @@ Just add the STLBGVideo folder to your project.
 拖拽STLBGVideo文件夹到你的项目
 
 ## 使用
+
 1. 把你自己的mp4文件拖拽到你的项目
 2. 你需要把'C415F3F13BBD50B1-info.plist' 里的内容设置为你自己视频的信息
 3. 让你自己的视图控制器继承STLVideoViewController
 4. 运行你的程序
-
 
 * 如果在使用过程中发现功能不能正常使用，希望你能Issues我.
 
