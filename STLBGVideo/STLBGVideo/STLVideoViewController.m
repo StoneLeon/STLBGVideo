@@ -9,8 +9,16 @@
 #import "STLVideoViewController.h"
 #import "STLVideoFunctions.h"
 
+
+#define CurrentSystemVersion ([[[UIDevice currentDevice] systemVersion] floatValue])
+
 @interface STLVideoViewController ()
+
 @property (nonatomic,strong) MPMoviePlayerController *player;
+
+#ifdef ____IPHONE_8_0
+@property (nonatomic,strong) AVPlayerViewController *player;
+#endif
 @property (nonatomic,assign) BOOL isLoop;
 
 @end
@@ -21,7 +29,14 @@
 
 - (void)getPlayerNotifications {
 
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(moviePlayerStateChangeNotification:) name:MPMoviePlayerPlaybackStateDidChangeNotification object:nil];
+    if (CurrentSystemVersion < 8.0) {
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(moviePlayerStateChangeNotification:) name:MPMoviePlayerPlaybackStateDidChangeNotification object:nil];
+    }else {
+        #ifdef __IPHONE_8_0
+        
+        
+        #endif
+    }
     
 }
 
