@@ -16,27 +16,27 @@
 
 @property (nonatomic,strong) MPMoviePlayerController *player;
 
-#ifdef ____IPHONE_8_0
-@property (nonatomic,strong) AVPlayerViewController *player;
-#endif
+@property (nonatomic,strong) AVAudioSession *avaudioSession;
+
 @property (nonatomic,assign) BOOL isLoop;
 
 @end
 
 @implementation STLVideoViewController
 
-#pragma mark - Player
+#pragma mark - allow background music still play
+- (void)stillPlayMusic {
 
+    self.avaudioSession = [AVAudioSession sharedInstance];
+    NSError *error = nil;
+    [self.avaudioSession setCategory:AVAudioSessionCategoryAmbient error:&error];
+    
+}
+
+#pragma mark - Player
 - (void)getPlayerNotifications {
 
-    if (CurrentSystemVersion < 8.0) {
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(moviePlayerStateChangeNotification:) name:MPMoviePlayerPlaybackStateDidChangeNotification object:nil];
-    }else {
-        #ifdef __IPHONE_8_0
-        
-        
-        #endif
-    }
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(moviePlayerStateChangeNotification:) name:MPMoviePlayerPlaybackStateDidChangeNotification object:nil];
     
 }
 
@@ -84,6 +84,9 @@
 #pragma mark - life cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self stillPlayMusic];
+
     if ([STLVideoFunctions getUrlInfo] != nil) {
         self.isLoop = [STLVideoFunctions getLoopMode];
         

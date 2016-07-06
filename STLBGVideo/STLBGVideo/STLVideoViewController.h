@@ -10,6 +10,7 @@
 #import <MediaPlayer/MediaPlayer.h>
 #import <MediaPlayer/MPMoviePlayerController.h>
 #import <AVKit/AVKit.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface STLVideoViewController : UIViewController
 
