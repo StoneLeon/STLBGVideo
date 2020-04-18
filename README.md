@@ -35,5 +35,4 @@ Just add the STLBGVideo folder to your project.
 
 * 如果在使用过程中发现功能不能正常使用，希望你能Issues我.
 
-如果想更多的交流可以在简书:http://www.jianshu.com/p/c4704c086b67  下留言或者微博@神经症人格者 
 
